@@ -151,9 +151,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@linkedin](https://twitter.com/your_username) - dimasprasetyo485@gmail.com
+Your Name - [@linkedin](https://www.linkedin.com/in/dimas-prasetyo) - dimasprasetyo485@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/prasetyodimas/angular-prime-template](https://github.com/prasetyodimas/angular-prime-template)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/screenshot.png
