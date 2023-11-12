@@ -59,6 +59,11 @@ Here's why:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
+Angular Version CLI :
+[![Angular CLI version informations][angular-cli]](https://example.com)
+
+
+
 * See the repo below :
   ```sh
   Use the `https://github.com/sabidev2021/angular-prime-template` to get started.
@@ -161,5 +166,6 @@ Project Link: [https://github.com/sabidev2021/angular-prime-template](https://gi
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/screenshot.png
+[angular-cli]: images/angular-cli.png
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
