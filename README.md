@@ -59,7 +59,10 @@ Here's why:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `https://github.com/sabidev2021/angular-prime-template` to get started.
+* See the repo below :
+  ```sh
+  Use the `https://github.com/sabidev2021/angular-prime-template` to get started.
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,16 +91,15 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+3. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
