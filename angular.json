@@ -49,6 +49,7 @@
                   "maximumError": "4kb"
                 }
               ],
+              "index": "src/index.html",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -57,7 +58,49 @@
               ],
               "outputHashing": "all"
             },
+            "staging": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "index": "src/index.stag.html",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stag.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
             "development": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "index": "src/index.dev.html",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "outputHashing": "all",
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -74,8 +117,14 @@
             "production": {
               "browserTarget": "my-app:build:production"
             },
+            "staging": {
+              "browserTarget": "my-app:build:staging"
+            },
             "development": {
               "browserTarget": "my-app:build:development"
+            },
+            "local": {
+              "browserTarget": "my-app:build:local"
             }
           },
           "defaultConfiguration": "development"
