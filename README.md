@@ -9,7 +9,7 @@
   <h3 align="center">Angular PrimeNg Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An awesome Project boilerplate / template to jumpstart your projects using Angular & primeNg!
     <br />
     <a href="https://primeng.org"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,16 +50,16 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+There are many great Angular Boostraping with PrimeNg templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a Angular Boostraping with PrimeNg template so amazing that it'll be the last one you ever need.
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You shouldn't be doing the same tasks over and over like creating a Angular Boostraping with PrimeNg from scratch
 * You should implement DRY principles to the rest of your life :smile:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `BLANK_README.md` to get started.
+Use the `https://github.com/sabidev2021/angular-prime-template` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,7 +153,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@linkedin](https://www.linkedin.com/in/dimas-prasetyo) - dimasprasetyo485@gmail.com
 
-Project Link: [https://github.com/prasetyodimas/angular-prime-template](https://github.com/prasetyodimas/angular-prime-template)
+Project Link: [https://github.com/sabidev2021/angular-prime-template](https://github.com/sabidev2021/angular-prime-template)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/screenshot.png
