@@ -120,6 +120,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Add Changelog
 - [x] Add back to top links
 - [ ] Add library UI Angular PrimeNg integrations and installations
+- [ ] Add Continues Integration & Auto merge using github actions
 - [ ] Add Additional Templates w/ Examples
 - [ ] Add "components" document to easily copy & paste sections of the projects (PRIME-NG Sample)
 - [ ] Multi-language Support
@@ -154,7 +155,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@linkedin](https://www.linkedin.com/in/dimas-prasetyo) - dimasprasetyo485@gmail.com
+Dimas Prasetyo - [@linkedin](https://www.linkedin.com/in/dimas-prasetyo) - dimasprasetyo485@gmail.com
 
 Project Link: [https://github.com/sabidev2021/angular-prime-template](https://github.com/sabidev2021/angular-prime-template)
 
