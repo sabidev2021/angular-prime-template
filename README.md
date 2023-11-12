@@ -117,8 +117,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Add Changelog
 - [x] Add back to top links
+- [ ] Add library UI Angular PrimeNg integrations and installations
 - [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Add "components" document to easily copy & paste sections of the projects (PRIME-NG Sample)
 - [ ] Multi-language Support
     - [ ] Chinese
     - [ ] Spanish
