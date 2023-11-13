@@ -104,9 +104,18 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Check your environment target your API in `src/environtments/` and package.json
+   ```json
+    "ng": "ng",
+    "start": "ng serve",
+    "start:dev": "ng serve --configuration development",
+    "start:staging": "ng serve --configuration staging",
+    "build": "ng build",
+    "build:dev": "ng build --configuration development",
+    "build:staging": "ng build --configuration staging",
+    "build:production": "ng build --configuration production --stats-json",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
