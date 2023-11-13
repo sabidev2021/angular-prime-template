@@ -59,7 +59,15 @@ Here's why:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `https://github.com/sabidev2021/angular-prime-template` to get started.
+Angular Version CLI :
+[![Angular CLI version informations][angular-cli]](https://example.com)
+
+
+
+* See the repo below :
+  ```sh
+  Use the `https://github.com/sabidev2021/angular-prime-template` to get started.
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,18 +96,26 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Check your environment target your API in `src/environtments/` and package.json
+   ```json
+    "ng": "ng",
+    "start": "ng serve",
+    "start:dev": "ng serve --configuration development",
+    "start:staging": "ng serve --configuration staging",
+    "build": "ng build",
+    "build:dev": "ng build --configuration development",
+    "build:staging": "ng build --configuration staging",
+    "build:production": "ng build --configuration production --stats-json",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -117,11 +133,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Add Changelog
 - [x] Add back to top links
+- [ ] Add library UI Angular PrimeNg integrations and installations
+- [ ] Add Continues Integration & Auto merge using github actions
 - [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Add "components" document to easily copy & paste sections of the projects (PRIME-NG Sample)
 - [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+    - [ ] Indonesia
+    - [ ] English
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
@@ -151,11 +169,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@linkedin](https://www.linkedin.com/in/dimas-prasetyo) - dimasprasetyo485@gmail.com
+Dimas Prasetyo - [@linkedin](https://www.linkedin.com/in/dimas-prasetyo) - dimasprasetyo485@gmail.com
 
 Project Link: [https://github.com/sabidev2021/angular-prime-template](https://github.com/sabidev2021/angular-prime-template)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/screenshot.png
+[angular-cli]: images/angular-cli.png
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
