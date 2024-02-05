@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard-list.component.html',
   styleUrls: ['./dashboard-list.component.scss']
 })
-export class DashboardListComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class DashboardListComponent  {
+  title = 'my-app';
 }

@@ -2,8 +2,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./module/dashboard/dashboard.module').then(m => m.DashboardModule),
+    data: {animation: ''}
+  },
   {
     path: 'dashboard',
     loadChildren: () => import('./module/dashboard/dashboard.module').then(m => m.DashboardModule),
@@ -20,10 +26,10 @@ const routes: Routes = [
     data: {animation: ''}
   },
   {
-    path: '',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
+    path: '**',
+    pathMatch: 'full',
+    component: NotfoundComponent
+}
 ];
 
 @NgModule({
