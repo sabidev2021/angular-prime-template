@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { LangService } from 'src/app/lang/lang.service';
 @Component({
   selector: 'app-dashboard-list',

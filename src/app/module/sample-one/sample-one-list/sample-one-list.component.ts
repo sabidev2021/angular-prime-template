@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LangService } from 'src/app/lang/lang.service';
 
 @Component({
   selector: 'app-sample-one-list',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SampleOneListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private langService: LangService) { }
 
   ngOnInit(): void {
+    this.langService.setLanguage()
   }
 
 }
