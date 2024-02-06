@@ -1,6 +1,6 @@
 {
   "name": "angular-prime-template",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,7 +13,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
-    "build:ci": "ng build --prod"
+    "build:ci": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,8 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@ngx-translate/core": "14.0.0",
+    "@ngx-translate/http-loader": "7.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
