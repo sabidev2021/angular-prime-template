@@ -16,19 +16,15 @@ export class DashboardListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.initLang()
+    this.initializeLang()
   }
 
-  initLang() {
+  initializeLang() {
     this.langService.setLanguage()
-    console.log(this.translateService.store.langs)
-    console.log(this.translateService.store.currentLang)
-    let currentLang = this.translateService.currentLang;
-    currentLang = '';
     this.translateService.store.onLangChange.subscribe(
       (lang: LangChangeEvent) => {
         console.log(' ==> DashboardModule ', lang);
-        this.translateService.use(lang.lang);
+        this.langService.switchLang(lang.lang);
       }
     );
   }

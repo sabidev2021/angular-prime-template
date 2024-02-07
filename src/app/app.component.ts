@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { LangService } from './lang/lang.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,14 +8,14 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  constructor(private translateService: TranslateService) { }
+  constructor(private langService: LangService) { }
 
   ngOnInit(): void {
-    this.callCustomEvent()
+    this.langService.addCustomEvent()
   }
 
   ngOnDestroy(): void {
-    this.removeCustomEvent()
+    this.langService.removeCustomEvent()
   }
 
   initCustomEvent(param: string) {
@@ -25,23 +26,6 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     window.dispatchEvent(event);
-  }
-
-  callCustomEvent() {
-    window.addEventListener("CHANGE_LANGUAGE", (event) => {
-      this.listenChangeLang(event, this.translateService)
-    });
-  }
-
-  listenChangeLang(event: any, translateService: TranslateService): void {
-    const isLang = event?.detail?.lang;
-    translateService.use(isLang)
-  }
-
-  removeCustomEvent() {
-    window.removeEventListener("CHANGE_LANGUAGE", (event) => {
-      this.listenChangeLang(event, this.translateService)
-    });
   }
 
 }
