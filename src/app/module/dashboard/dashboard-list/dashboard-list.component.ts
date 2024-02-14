@@ -24,7 +24,7 @@ export class DashboardListComponent implements OnInit {
     this.translateService.store.onLangChange.subscribe(
       (lang: LangChangeEvent) => {
         console.log(' ==> DashboardModule ', lang);
-        // this.langService.switchLang(lang.lang);
+        this.langService.switchLang(lang.lang);
       }
     );
   }
