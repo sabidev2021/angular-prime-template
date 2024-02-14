@@ -8,7 +8,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LangService } from 'src/app/lang/lang.service';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/dashboard/', '.json');
+  // https://stackoverflow.com/questions/65717750/angular-use-translation-from-outside-assets
+  return new TranslateHttpLoader(http, './app/module/dashboard/i18n/', '.json');
 }
 
 @NgModule({
