@@ -7,7 +7,9 @@ import { LangService } from './lang/lang.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  constructor(private langService: LangService) { }
+  constructor(
+    private langService: LangService
+  ) { }
 
   ngOnInit(): void {
     this.langService.addCustomEvent()
@@ -26,6 +28,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
     window.dispatchEvent(event);
   }
-
 }
 
