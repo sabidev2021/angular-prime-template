@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LangService } from 'src/app/lang/lang.service';
+import { LangService } from 'src/app/core/lang/lang.service';
 
 @Component({
   selector: 'app-sample-one-list',

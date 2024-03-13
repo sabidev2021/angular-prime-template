@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { LangService } from './lang/lang.service';
+import { LangService } from './core/lang/lang.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
