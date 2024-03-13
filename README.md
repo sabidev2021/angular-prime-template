@@ -131,15 +131,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add library UI Angular PrimeNg integrations and installations
-- [ ] Add Continues Integration & Auto merge using github actions
+- [x] Add Changelog.
+- [x] Add back to top links.
+- [ ] Add library UI Angular PrimeNg integrations and installations.
+- [x] Add Continues Integration & Auto merge using github actions.
 - [ ] Add Additional Templates w/ Examples
 - [ ] Add "components" document to easily copy & paste sections of the projects (PRIME-NG Sample)
-- [ ] Multi-language Support
-    - [ ] Indonesia
-    - [ ] English
+- [x] Multi-language Support.
+    - [x] Indonesia.
+    - [x] English.
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
