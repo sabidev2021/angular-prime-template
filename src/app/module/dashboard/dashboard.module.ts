@@ -5,10 +5,9 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { LangService } from 'src/app/lang/lang.service';
+import { LangService } from 'src/app/core/lang/lang.service';
 
 export function createTranslateLoader(http: HttpClient) {
-  // https://stackoverflow.com/questions/65717750/angular-use-translation-from-outside-assets
   return new TranslateHttpLoader(http, './app/module/dashboard/i18n/', '.json');
 }
 

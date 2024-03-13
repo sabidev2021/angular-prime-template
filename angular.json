@@ -146,7 +146,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/app/module"
             ],
             "styles": [
               "src/styles.scss"
