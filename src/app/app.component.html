@@ -6,7 +6,7 @@
   />
     <span>Welcome</span> <br>
     <div class="spacer"></div>
-    <button (click)="initCustomEvent('in_ID')">ID</button>
+    <button (click)="initCustomEvent('id_ID')">ID</button>
     <button (click)="initCustomEvent('en_US')">EN</button>
     <div class="spacer"></div>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
@@ -26,8 +26,8 @@
   <ul class="main-menu">
     <li class="li-menu">
       <a href="/dashboard">Dashboard</a>
-      <a href="/sample-one">Sample One</a>
-      <a href="/sample-two">Sample Two - No Initialize Lang</a>
+      <a href="/sample-one">Sample One <span class="higlight-info"> - Import module translateLoader but not initialize Lang </span></a>
+      <a href="/sample-two">Sample Two <span class="higlight-info"> - No Initialize Lang & Import translateLoader ( No Setup )</span></a>
     </li>
   </ul>
   <router-outlet></router-outlet>

@@ -1,32 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { LangService } from 'src/app/lang/lang.service';
+import { AfterViewInit, Component } from '@angular/core';
+import { DashboardService } from '../services/dashboard.service';
+import { LangService } from 'src/app/core/lang/lang.service';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-dashboard-list',
   templateUrl: './dashboard-list.component.html',
   styleUrls: ['./dashboard-list.component.scss']
 })
-export class DashboardListComponent implements OnInit {
+export class DashboardListComponent extends DashboardService implements AfterViewInit  {
 
   title = 'angular-prime-template';
 
   constructor(
-    private langService: LangService,
-    private translateService: TranslateService
-  ) {}
-
-  ngOnInit(): void {
-    this.initializeLang()
+    private dashboardService: DashboardService,
+    langService: LangService,
+    translateService: TranslateService
+  ) {
+    super(langService, translateService)
   }
 
-  initializeLang() {
-    this.langService.setLanguage()
-    this.translateService.store.onLangChange.subscribe(
-      (lang: LangChangeEvent) => {
-        console.log(' ==> DashboardModule ', lang);
-        this.langService.switchLang(lang.lang);
-      }
-    );
+  ngAfterViewInit(): void {
+    this.dashboardService.initializeLang()
   }
-
 }
