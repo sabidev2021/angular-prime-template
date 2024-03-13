@@ -21,7 +21,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot({
+      defaultLanguage: 'id_ID'
+    })
   ],
   providers: [
     TranslateService

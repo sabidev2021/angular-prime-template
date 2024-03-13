@@ -9,11 +9,11 @@ export class LangService {
   constructor(private translateService: TranslateService) { }
 
   setLanguage() {
-    this.translateService.addLangs(['in_ID', 'en_US']);
-    // this language will be used as a fallback when a tsranslation isn't found in the current language
-    this.translateService.setDefaultLang('in_ID');
+    this.translateService.addLangs(['id_ID', 'en_US']);
+    // this language will be used as a fallback when a translation isn't found in the current language
+    this.translateService.setDefaultLang('id_ID');
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    this.translateService.use('in_ID');
+    this.translateService.use('id_ID');
   }
 
   switchLang(isLang: string) {
