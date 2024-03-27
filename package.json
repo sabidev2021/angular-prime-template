@@ -13,6 +13,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
+    "coverage": "ng test --watch=true --code-coverage=true",
     "build:ci": "ng build --configuration production"
   },
   "private": true,
