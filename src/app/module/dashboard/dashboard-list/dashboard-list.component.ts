@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../services/dashboard.service';
 import { LangService } from 'src/app/core/lang/lang.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './dashboard-list.component.html',
   styleUrls: ['./dashboard-list.component.scss']
 })
-export class DashboardListComponent extends DashboardService implements AfterViewInit  {
+export class DashboardListComponent extends DashboardService implements OnInit  {
 
   title = 'angular-prime-template';
 
@@ -19,7 +19,8 @@ export class DashboardListComponent extends DashboardService implements AfterVie
     super(langService, translateService)
   }
 
-  ngAfterViewInit(): void {
-    this.dashboardService.initializeLang()
+  ngOnInit(): void {
+    this.dashboardService.initializeLang();
   }
+  
 }

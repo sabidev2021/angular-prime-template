@@ -1,30 +1,30 @@
-import { Injectable, OnInit } from '@angular/core';
+import { AfterContentInit, Injectable } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { from, tap } from 'rxjs';
 import { LangService } from 'src/app/core/lang/lang.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DashboardService implements OnInit {
+export class DashboardService implements AfterContentInit {
   constructor(
     private langService: LangService,
     private translateService: TranslateService
   ) {
   }
-  
-  ngOnInit(): void {
+
+  ngAfterContentInit(): void {
     this.initializeLang()
-  }
+  } 
 
   initializeLang() {
     this.langService.setLanguage()
-    this.translateService.store.onLangChange.subscribe(
-      (lang: LangChangeEvent) => {
+    from(this.translateService.store.onLangChange).pipe(
+      tap((lang: LangChangeEvent) => {
         this.langService.switchLang(lang.lang);
         this.langService.logLangSetting('Dashboard', lang);
-      }
-    );
+      })
+    ).subscribe();
   }
-
 }
 
