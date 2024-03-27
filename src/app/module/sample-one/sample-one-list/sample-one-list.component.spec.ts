@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SampleOneListComponent } from './sample-one-list.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('SampleOneListComponent', () => {
   let component: SampleOneListComponent;
@@ -8,7 +9,10 @@ describe('SampleOneListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SampleOneListComponent ]
+      declarations: [ SampleOneListComponent ],
+      imports: [
+        TranslateModule.forRoot()
+      ]
     })
     .compileComponents();
   });

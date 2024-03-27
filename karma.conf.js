@@ -25,15 +25,23 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/my-app'),
+      dir: require('path').join(__dirname, './coverage/test-suites-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
-      ]
+      ],
+      check: {
+        global: {
+          statements: 50,
+          branches: 0,
+          functions: 50,
+          lines: 50,
+        },
+      },
     },
     reporters: ['progress', 'kjhtml'],
-    port: 9876,
+    port: 9700,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
