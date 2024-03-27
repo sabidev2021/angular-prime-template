@@ -14,7 +14,7 @@ describe('DashboardService', () => {
       store: {
         onLangChange: new BehaviorSubject<LangChangeEvent>({ 
           lang: 'en',
-          translations: { test: 'dumy' } 
+          translations: Object
         })
       }
     };
@@ -46,7 +46,7 @@ describe('DashboardService', () => {
 
     const newLang: LangChangeEvent = {
       lang: 'en',
-      translations: { test: 'dumy' } 
+      translations: { } 
     };
     
     translateService.store.onLangChange.next(newLang);
