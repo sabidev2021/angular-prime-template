@@ -169,11 +169,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Dimas Prasetyo - (https://www.linkedin.com/in/dimas-prasetyo).
-Linkedin : [Professional Connection](https://www.linkedin.com/in/dimas-prasetyo).
-Mail : dimasprasetyo485@gmail.com
-Project Link: [https://github.com/sabidev2021/angular-prime-template](https://github.com/sabidev2021/angular-prime-template).
+  Dimas Prasetyo - (https://www.linkedin.com/in/dimas-prasetyo).
+  Linkedin : [Professional Connection](https://www.linkedin.com/in/dimas-prasetyo).
+  Mail : dimasprasetyo485@gmail.com
 
+## Source Code
+  Project Link: [https://github.com/sabidev2021/angular-prime-template](https://github.com/sabidev2021/angular-prime-template).
+   
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/screenshot.png
 [angular-cli]: images/angular-cli.png
