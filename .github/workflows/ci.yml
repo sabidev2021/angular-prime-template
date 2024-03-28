@@ -28,5 +28,16 @@ jobs:
         run: npm run build
 
       - name: Run unit tests
-        run: npm run test:ci
-
+        id: unit-tests
+        run: | 
+          if npm test; then
+            echo "Tests passed"
+            echo "::set-output name=status::success"
+          else
+            echo "Tests failed"
+            echo "::set-output name=status::failure"
+          fi
+          
+      - name: Check test status
+        run: exit 1
+        if: ${{ steps.unit-tests.outputs.status == 'failure' }}
