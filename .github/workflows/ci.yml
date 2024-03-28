@@ -1,10 +1,13 @@
 name: CI
 on:
   push:
-    branches: [ '*', main ]
+    branches: 
+      - '*'
+      - '*/*'
+      - main
   pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: 
+      - main
 
 jobs:
   build:
@@ -13,29 +16,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: 18.19.0 
+          node-version: 16.20.2 
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build of code 
         run: npm run build
 
       - name: Run unit tests
-        run: npm run test
+        id: unit-tests
+        run: | 
+          if npm run test:ci; then
+            echo "Tests passed"
+            echo "::set-output name=status::success"
+          else
+            echo "Tests failed"
+            echo "::set-output name=status::failure"
+          fi
 
+      - name: Check test status
+        run: exit 1
+        if: ${{ steps.unit-tests.outputs.status == 'failure' }}
