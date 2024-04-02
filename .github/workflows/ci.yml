@@ -31,12 +31,8 @@ jobs:
         id: unit-tests
         run: | 
           if npm run test:ci; then
-            echo "Tests passed"
-            # echo "::set-output name=status::success"
             run: echo "{name}={value}" >> $GITHUB_STATE
           else
-            echo "Tests failed"
-            # echo "::set-output name=status::failure"
             run: echo "{name}={value}" >> $GITHUB_OUTPUT
           fi
 
