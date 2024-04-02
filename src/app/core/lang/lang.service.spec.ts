@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LangService } from './lang.service';
+import { environment } from 'src/environments/environment.dev';
 
 describe('LangService', () => {
   let service: LangService;
@@ -32,11 +33,12 @@ describe('LangService', () => {
   });
 
   it('should switch language', () => {
-    const useSpy = spyOn(translateService, 'use');
+    const lang = 'en_US';
+    spyOn(translateService, 'use');
 
-    service.switchLang('en_US');
+    service.switchLang(lang);
 
-    expect(useSpy).toHaveBeenCalledWith('en_US');
+    expect(translateService.use).toHaveBeenCalledWith(lang);
   });
 
   it('should add custom event', () => {
@@ -44,7 +46,7 @@ describe('LangService', () => {
 
     service.addCustomEvent();
 
-    expect(window.addEventListener).toHaveBeenCalled();
+    expect(window.addEventListener).toHaveBeenCalledWith("CHANGE_LANGUAGE", jasmine.any(Function));
   });
 
   it('should remove custom event', () => {
@@ -62,6 +64,30 @@ describe('LangService', () => {
     service.listenChangeLang(event, translateService);
 
     expect(translateServiceSpy).toHaveBeenCalledWith('en_US');
+  });
+
+  
+  it('should log language setting when debug mode is enabled', () => {
+    environment.debug.lang = true;
+    const moduleName = 'TestModule';
+    const langChangeEvent = { lang: 'en_US' } as any;
+
+    spyOn(console, 'info');
+
+    service.logLangSetting(moduleName, langChangeEvent);
+
+    expect(console.info).toHaveBeenCalledWith(`Initialize Lang ==> ${moduleName} Module`, langChangeEvent);
+  });
+
+  it('should not log language setting when debug mode is disabled', () => {
+    environment.debug.lang = false;
+    const moduleName = 'TestModule';
+    const langChangeEvent = { lang: 'en_US' } as any;
+
+    spyOn(console, 'info');
+   
+    service.logLangSetting(moduleName, langChangeEvent);
+    expect(console.info).not.toHaveBeenCalled();
   });
 
 });
