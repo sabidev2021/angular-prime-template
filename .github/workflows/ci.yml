@@ -31,9 +31,9 @@ jobs:
         id: unit-tests
         run: | 
           if npm run test:ci; then
-            run: echo "{name}={value}" >> $GITHUB_STATE
+            echo "{name}={value}" >> $GITHUB_STATE
           else
-            run: echo "{name}={value}" >> $GITHUB_OUTPUT
+            echo "{name}={value}" >> $GITHUB_OUTPUT
           fi
 
       - name: Check test status
